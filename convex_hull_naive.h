@@ -1,7 +1,7 @@
 #include <iostream>
 #include <CGAL/Exact_predicates_inexact_constructions_kernel.h>
 #include <CGAL/convex_hull_2.h>
-
+//https://doc.cgal.org/latest/Spatial_sorting/index.html
 typedef CGAL::Exact_predicates_inexact_constructions_kernel K;
 typedef K::Point_2 Point_2;
 typedef K::Segment_2 Segment_2;
@@ -20,8 +20,6 @@ bool IsPointAtRight( const _TPoint& p, const _TPoint& q, const _TPoint& r )
 
   return( qpX * rpY > rpX * qpY );
 }
-
-
 
 
 // -------------------------------------------------------------------------
