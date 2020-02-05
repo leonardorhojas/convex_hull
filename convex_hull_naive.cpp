@@ -82,7 +82,7 @@ int main(int argc, char* argv[])
 
  for(int i = 0; i < results.size(); i=i+2){
 
-  std::cout <<  results[i] << " | "<<results[i+2] <<std::endl;
+  std::cout <<  results[i] << " | "<<results[i+1] <<std::endl;
 
 
     if(results[i]<results[i+1]){
