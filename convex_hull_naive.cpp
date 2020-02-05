@@ -72,14 +72,19 @@ int main(int argc, char* argv[])
 
 /*Genera vector de segmentos de linea*/       
 			if (valid==true){
-			resulting_segments.push_back( Segment_2(points[p] ,points[q]) )	;
+			//resulting_segments.push_back( Segment_2(points[p] ,points[q]) )	;
+      results.push_back(points[p]);
+      results.push_back(points[q]);
 				}
 			}
 		}
 	}
 
- for(int i = 0; i < resulting_segments.size(); i++){
-    std::cout << resulting_segments[i] << std::endl;
+ for(int i = 0; i < results.size(); i=i+2){
+
+    
+    std::string output (results[i]" , " results[i+1]);
+    std::cout <<  output << std::endl;
     if(points[1]<points[3]){
      std::cout << "Resulti1 < result2" << std::endl; 
      std::cout <<  points[1]<< std::endl; 
