@@ -82,12 +82,13 @@ int main(int argc, char* argv[])
     std::cout << resulting_segments[i] << std::endl;
     if(points[1]<points[3]){
      std::cout << "Resulti1 < result2" << std::endl; 
-     std::cout <<  points[1] + ", " + points[3]<< std::endl; 
+     std::cout <<  points[1]<< std::endl; 
+     std::cout <<  points[3]<< std::endl; 
 
    } else{
       std::cout << "Resulti1 > result2"<< std::endl; 
-      std::cout <<  points[1] + ", " + points[3] << std::endl; 
-
+      std::cout <<  points[1]<< std::endl; 
+      std::cout <<  points[3]<< std::endl; 
    }
 
  }
