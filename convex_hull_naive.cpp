@@ -81,9 +81,9 @@ int main(int argc, char* argv[])
  for(int i = 0; i < resulting_segments.size(); i++){
     std::cout << resulting_segments[i] << std::endl;
     if(points[1]<points[3]){
-     std::cout << "Resulti1 < result2"<< std::endl; 
+     std::cout << "Resulti1 < result2" + points[1] +", "+ points 3<< std::endl; 
    } else{
-      std::cout << "Resulti1 > result2"<< std::endl; 
+      std::cout << "Resulti1 > result2" + points[1] +", "+ points 3 << std::endl; 
 
    }
 
