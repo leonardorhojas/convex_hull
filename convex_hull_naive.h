@@ -1,6 +1,8 @@
 #include <iostream>
 #include <CGAL/Exact_predicates_inexact_constructions_kernel.h>
 #include <CGAL/convex_hull_2.h>
+#include <CGAL/Segment_2.h>
+
 //https://doc.cgal.org/latest/Spatial_sorting/index.html
 typedef CGAL::Exact_predicates_inexact_constructions_kernel K;
 typedef K::Point_2 Point_2;
@@ -49,9 +51,10 @@ int main()
 					
 				}
 			if (valid==true){
-			//resulting_segments.push_back(points[p],points[q])	;
-			 results.push_back(points[p])    ;
-             results.push_back(points[q])    ;
+			resulting_segments.push_back(points[p] ,points[q] )	;
+			/* results.push_back(points[p])    ;
+             results.push_back(points[q])    ;*/
+			 
 				}
 			}
 		}

@@ -70,7 +70,7 @@ int main(int argc, char* argv[])
 					
 				}
 			if (valid==true){
-			resulting_segments.push_back(points[p]&p,points[q]&q)	;
+			resulting_segments.push_back(points[p],points[q])	;
 			 /*results.push_back(points[p])    ;
                          results.push_back(points[q])    ;*/
 				}
@@ -78,8 +78,8 @@ int main(int argc, char* argv[])
 		}
 	}
 
- for(int i = 0; i < results.size(); i++){
-    std::cout << results[i] << std::endl;
+ for(int i = 0; i < resulting_segments.size(); i++){
+    std::cout << resulting_segments[i] << std::endl;
 
  }
 
