@@ -83,7 +83,7 @@ int main(int argc, char* argv[])
  for(int i = 0; i < results.size(); i=i+2){
 
     
-    std::string output (results[i]" , " results[i+1]);
+    std::string output (results[i]+" , "+ results[i+1]);
     std::cout <<  output << std::endl;
     if(results[0]<results[1]){
      std::cout << "Result1 < result2" << std::endl; 
