@@ -70,7 +70,7 @@ int main(int argc, char* argv[])
 					
 				}
 			if (valid==true){
-			resulting_segments.push_back(points[p],points[q])	;
+			resulting_segments.push_back(points[p] & p,points[q] & q)	;
 			 /*results.push_back(points[p])    ;
                          results.push_back(points[q])    ;*/
 				}
