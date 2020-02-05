@@ -1,0 +1,1 @@
+/bin/c++    -rdynamic CMakeFiles/convex_hull.dir/convex_hull.cpp.o  -o convex_hull -Wl,-rpath,/usr/local/lib64 /usr/local/lib64/libCGAL.so.13.0.3 -lmpfr -lgmp 

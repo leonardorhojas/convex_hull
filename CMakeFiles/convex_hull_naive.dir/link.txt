@@ -1,0 +1,1 @@
+/bin/c++    -rdynamic CMakeFiles/convex_hull_naive.dir/convex_hull_naive.cpp.o  -o convex_hull_naive -Wl,-rpath,/usr/local/lib64 /usr/local/lib64/libCGAL.so.13.0.3 -lmpfr -lgmp 
