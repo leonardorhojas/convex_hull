@@ -1,0 +1,1 @@
+/bin/c++    -rdynamic CMakeFiles/sorting.dir/sorting.cpp.o  -o sorting -Wl,-rpath,/usr/local/lib64 /usr/local/lib64/libCGAL.so.13.0.3 -lmpfr -lgmp 
