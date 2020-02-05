@@ -84,9 +84,9 @@ int main(int argc, char* argv[])
 
     
     std::string output0;
-    output0 =("a" + " , " +'b');
+    output0 ="a" + " , " +'b';
     std::string output1 ;
-    output1 =("a" + " , " +'b');
+    output1 ="a" + " , " +'b';
 
     std::cout <<  output0 << std::endl;
     if(results[i]<results[i+1]){
