@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named sortingspatial
+
+# Build rule for target.
+sortingspatial: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sortingspatial
+.PHONY : sortingspatial
+
+# fast build rule for target.
+sortingspatial/fast:
+	$(MAKE) -f CMakeFiles/sortingspatial.dir/build.make CMakeFiles/sortingspatial.dir/build
+.PHONY : sortingspatial/fast
+
+#=============================================================================
 # Target rules for targets named ALL_CGAL_TARGETS
 
 # Build rule for target.
@@ -174,6 +187,19 @@ convex_hull_naive: cmake_check_build_system
 convex_hull_naive/fast:
 	$(MAKE) -f CMakeFiles/convex_hull_naive.dir/build.make CMakeFiles/convex_hull_naive.dir/build
 .PHONY : convex_hull_naive/fast
+
+#=============================================================================
+# Target rules for targets named sorting
+
+# Build rule for target.
+sorting: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sorting
+.PHONY : sorting
+
+# fast build rule for target.
+sorting/fast:
+	$(MAKE) -f CMakeFiles/sorting.dir/build.make CMakeFiles/sorting.dir/build
+.PHONY : sorting/fast
 
 array_convex_hull_2.o: array_convex_hull_2.cpp.o
 
@@ -256,6 +282,60 @@ convex_hull_naive.cpp.s:
 	$(MAKE) -f CMakeFiles/convex_hull_naive.dir/build.make CMakeFiles/convex_hull_naive.dir/convex_hull_naive.cpp.s
 .PHONY : convex_hull_naive.cpp.s
 
+sorting.o: sorting.cpp.o
+
+.PHONY : sorting.o
+
+# target to build an object file
+sorting.cpp.o:
+	$(MAKE) -f CMakeFiles/sorting.dir/build.make CMakeFiles/sorting.dir/sorting.cpp.o
+.PHONY : sorting.cpp.o
+
+sorting.i: sorting.cpp.i
+
+.PHONY : sorting.i
+
+# target to preprocess a source file
+sorting.cpp.i:
+	$(MAKE) -f CMakeFiles/sorting.dir/build.make CMakeFiles/sorting.dir/sorting.cpp.i
+.PHONY : sorting.cpp.i
+
+sorting.s: sorting.cpp.s
+
+.PHONY : sorting.s
+
+# target to generate assembly for a file
+sorting.cpp.s:
+	$(MAKE) -f CMakeFiles/sorting.dir/build.make CMakeFiles/sorting.dir/sorting.cpp.s
+.PHONY : sorting.cpp.s
+
+sortingspatial.o: sortingspatial.cpp.o
+
+.PHONY : sortingspatial.o
+
+# target to build an object file
+sortingspatial.cpp.o:
+	$(MAKE) -f CMakeFiles/sortingspatial.dir/build.make CMakeFiles/sortingspatial.dir/sortingspatial.cpp.o
+.PHONY : sortingspatial.cpp.o
+
+sortingspatial.i: sortingspatial.cpp.i
+
+.PHONY : sortingspatial.i
+
+# target to preprocess a source file
+sortingspatial.cpp.i:
+	$(MAKE) -f CMakeFiles/sortingspatial.dir/build.make CMakeFiles/sortingspatial.dir/sortingspatial.cpp.i
+.PHONY : sortingspatial.cpp.i
+
+sortingspatial.s: sortingspatial.cpp.s
+
+.PHONY : sortingspatial.s
+
+# target to generate assembly for a file
+sortingspatial.cpp.s:
+	$(MAKE) -f CMakeFiles/sortingspatial.dir/build.make CMakeFiles/sortingspatial.dir/sortingspatial.cpp.s
+.PHONY : sortingspatial.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -263,12 +343,14 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
+	@echo "... edit_cache"
+	@echo "... sortingspatial"
 	@echo "... ALL_CGAL_TARGETS"
 	@echo "... array_convex_hull_2"
 	@echo "... cgal_check_build_system"
 	@echo "... convex_hull"
 	@echo "... convex_hull_naive"
-	@echo "... edit_cache"
+	@echo "... sorting"
 	@echo "... array_convex_hull_2.o"
 	@echo "... array_convex_hull_2.i"
 	@echo "... array_convex_hull_2.s"
@@ -278,6 +360,12 @@ help:
 	@echo "... convex_hull_naive.o"
 	@echo "... convex_hull_naive.i"
 	@echo "... convex_hull_naive.s"
+	@echo "... sorting.o"
+	@echo "... sorting.i"
+	@echo "... sorting.s"
+	@echo "... sortingspatial.o"
+	@echo "... sortingspatial.i"
+	@echo "... sortingspatial.s"
 .PHONY : help
 
 

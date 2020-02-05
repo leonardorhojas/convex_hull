@@ -60,6 +60,43 @@ CMAKE_SOURCE_DIR = /usr/local/bin/CGAL-5.0.1/examples/Custom
 CMAKE_BINARY_DIR = /usr/local/bin/CGAL-5.0.1/examples/Custom
 
 #=============================================================================
+# Target rules for target CMakeFiles/sortingspatial.dir
+
+# All Build rule for target.
+CMakeFiles/sortingspatial.dir/all:
+	$(MAKE) -f CMakeFiles/sortingspatial.dir/build.make CMakeFiles/sortingspatial.dir/depend
+	$(MAKE) -f CMakeFiles/sortingspatial.dir/build.make CMakeFiles/sortingspatial.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/usr/local/bin/CGAL-5.0.1/examples/Custom/CMakeFiles --progress-num=9,10 "Built target sortingspatial"
+.PHONY : CMakeFiles/sortingspatial.dir/all
+
+# Include target in all.
+all: CMakeFiles/sortingspatial.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/sortingspatial.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /usr/local/bin/CGAL-5.0.1/examples/Custom/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/sortingspatial.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /usr/local/bin/CGAL-5.0.1/examples/Custom/CMakeFiles 0
+.PHONY : CMakeFiles/sortingspatial.dir/rule
+
+# Convenience name for target.
+sortingspatial: CMakeFiles/sortingspatial.dir/rule
+
+.PHONY : sortingspatial
+
+# clean rule for target.
+CMakeFiles/sortingspatial.dir/clean:
+	$(MAKE) -f CMakeFiles/sortingspatial.dir/build.make CMakeFiles/sortingspatial.dir/clean
+.PHONY : CMakeFiles/sortingspatial.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/sortingspatial.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/ALL_CGAL_TARGETS.dir
 
 # All Build rule for target.
@@ -231,6 +268,43 @@ CMakeFiles/convex_hull_naive.dir/clean:
 
 # clean rule for target.
 clean: CMakeFiles/convex_hull_naive.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/sorting.dir
+
+# All Build rule for target.
+CMakeFiles/sorting.dir/all:
+	$(MAKE) -f CMakeFiles/sorting.dir/build.make CMakeFiles/sorting.dir/depend
+	$(MAKE) -f CMakeFiles/sorting.dir/build.make CMakeFiles/sorting.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/usr/local/bin/CGAL-5.0.1/examples/Custom/CMakeFiles --progress-num=7,8 "Built target sorting"
+.PHONY : CMakeFiles/sorting.dir/all
+
+# Include target in all.
+all: CMakeFiles/sorting.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/sorting.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /usr/local/bin/CGAL-5.0.1/examples/Custom/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/sorting.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /usr/local/bin/CGAL-5.0.1/examples/Custom/CMakeFiles 0
+.PHONY : CMakeFiles/sorting.dir/rule
+
+# Convenience name for target.
+sorting: CMakeFiles/sorting.dir/rule
+
+.PHONY : sorting
+
+# clean rule for target.
+CMakeFiles/sorting.dir/clean:
+	$(MAKE) -f CMakeFiles/sorting.dir/build.make CMakeFiles/sorting.dir/clean
+.PHONY : CMakeFiles/sorting.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/sorting.dir/clean
 
 .PHONY : clean
 
