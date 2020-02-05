@@ -85,15 +85,15 @@ int main(int argc, char* argv[])
     
     std::string output (results[i]" , " results[i+1]);
     std::cout <<  output << std::endl;
-    if(results[1]<results[3]){
+    if(results[0]<results[1]){
      std::cout << "Result1 < result2" << std::endl; 
+     std::cout <<  results[0]<< std::endl; 
      std::cout <<  results[1]<< std::endl; 
-     std::cout <<  results[3]<< std::endl; 
 
    } else{
       std::cout << "Result1 > result2"<< std::endl; 
+      std::cout <<  results[0]<< std::endl; 
       std::cout <<  results[1]<< std::endl; 
-      std::cout <<  results[3]<< std::endl; 
    }
 
  }
