@@ -57,7 +57,7 @@ int main(int argc, char* argv[])
   } // end for
 	
 	
-	/*Crear vector de Segmentos de linea p-q*/
+/*Crear vector de Segmentos de linea p-q*/
 	for (int p=0; p<points.size();p++)
 	{
 		for (int q=0; q<points.size();q++)
@@ -69,10 +69,10 @@ int main(int argc, char* argv[])
 				 valid &= IsPointAtRight( points[p], points[q], points[r] );
 					
 				}
+
+/*Genera vector de segmentos de linea*/       
 			if (valid==true){
 			resulting_segments.push_back( Segment_2(points[p] ,points[q]) )	;
-			 /*results.push_back(points[p])    ;
-                         results.push_back(points[q])    ;*/
 				}
 			}
 		}
@@ -80,18 +80,15 @@ int main(int argc, char* argv[])
 
  for(int i = 0; i < resulting_segments.size(); i++){
     std::cout << resulting_segments[i] << std::endl;
+    if(resulting_segments[1]<resulting_segments[2]){
+     std::cout << "Resulti1 < result2"<< std::endl; 
+   } else{
+      std::cout << "Resulti1 > result2"<< std::endl; 
+
+   }
 
  }
 
-  /*Calcula Casco Convexo
-  CGAL::convex_hull_2( points.begin(), points.end(), std::back_inserter(result) );*/
-  /*Imprime puntos del casco Convexo
-  std::cout <<  result.size() << " points on the convex hull:" << std::endl;
-  */
-  /* Imprimir reusltado
-  for(int i = 0; i < result.size(); i++){
-    std::cout << result[i] << std::endl;
-  }*/
-  return 0;
+return 0;
 }
 
