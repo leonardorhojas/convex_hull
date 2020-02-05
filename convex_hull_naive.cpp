@@ -34,7 +34,7 @@ int main(int argc, char* argv[])
 	
 	/* Generar puntos aleatorios y los asigna a un Vector de puntos points */
 	 Points points, results;
-	 Segments segments,resulting_segments;
+	 Segments resulting_segments;
 /*	 
 	for (int i=0; i<5; i++){
 	points.push_back(Point_2(rand(),rand()));
@@ -70,7 +70,7 @@ int main(int argc, char* argv[])
 					
 				}
 			if (valid==true){
-			resulting_segments.push_back(points[p] & p,points[q] & q)	;
+			resulting_segments.push_back(points[p] ,points[q] )	;
 			 /*results.push_back(points[p])    ;
                          results.push_back(points[q])    ;*/
 				}
