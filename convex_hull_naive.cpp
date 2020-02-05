@@ -85,7 +85,7 @@ int main(int argc, char* argv[])
     
    
 
-    std::cout <<  results[i] <<results[i+2] <<std::endl;
+    std::cout <<  results[i] << " , "<<results[i+2] <<std::endl;
     if(results[i]<results[i+1]){
      std::cout << "Result1 < result2" << std::endl; 
       std::cout <<  results[i] << " , "<< results[i+2]<< std::endl;
