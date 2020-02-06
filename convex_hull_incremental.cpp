@@ -144,6 +144,8 @@ r=points[2];
 
    }
 
+  std::cout<<"******"<<std::endl;
+  std::cout<<"******"<<std::endl;
 
  for(int i=0; i<results.size(); i++)std::cout<<results[i]<<std::endl;//output
 
