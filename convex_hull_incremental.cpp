@@ -99,16 +99,21 @@ p1=points[0];
 p2=points[1];
 p3=points[2];
 
-   for (int i=3;i<points.size();i++){
-       results.push_back(p1);
-       while(IsPointAtRight( points[p1], points[p2], points[p3] )!=true && i<points.size()-1)
+   for (int i=3;i<=points.size();i++){
+       if (i<points.size()){
+       results.push_back(p1);}
+       else {
+           results.push_back(p3);
+       }
+
+       while(IsPointAtRight( p1, p2, p3 )!=true && i<points.size())
        {
-        p2=p3;
-        if(i<points.size()-1 ){
-        p3=points[i];
+        p3=p2;
+        if(i<points.size() ){
+            p3=points[i];
             }else
             {
-                results.push_back(p2);
+                results.push_back(p3);
             }
             
         i++;
