@@ -10,7 +10,6 @@
 #include <CGAL/hilbert_sort.h>
 #include <CGAL/Delaunay_triangulation_2.h>
 #include <CGAL/spatial_sort.h>
-#include <iostream>
 #include <string>
 #include <algorithm>
 #include <functional>
@@ -159,7 +158,7 @@ int main(int argc, char* argv[])
    //CGAL::hilbert_sort (results.begin(), results.end());  
  // sort(results2.begin(),results2.end());
  //CGAL::spatial_sort(results.begin(),results.end());
-  sortVectors(results, greater<string>(), results, results2);
+  sortVectors(results, greater<Point_2>(), results, results2);
 
 
  //CGAL::hilbert_sort (results.begin(), v.end());  
