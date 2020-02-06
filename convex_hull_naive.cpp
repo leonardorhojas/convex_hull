@@ -8,6 +8,8 @@
 #include <vector>
 #include <CGAL/point_generators_2.h>
 #include <CGAL/hilbert_sort.h>
+#include <CGAL/Delaunay_triangulation_2.h>
+#include <CGAL/spatial_sort.h>
 
 typedef CGAL::Exact_predicates_inexact_constructions_kernel K;
 typedef K::Point_2 Point_2;
