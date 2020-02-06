@@ -35,7 +35,7 @@ bool IsPointAtRight( const _TPoint& p, const _TPoint& q, const _TPoint& r )
 
   return( qpX * rpY > rpX * qpY );
 
-
+}
   int main()
 {
 	 Point_2 p,q,r;
