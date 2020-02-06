@@ -39,10 +39,12 @@ bool IsPointAtRight( const _TPoint& p, const _TPoint& q, const _TPoint& r )
   int main()
 {
 	 Point_2 p,q,r;
+	 bool r_right_of_pq;
 	 p=( Point_2( -7.01302, 2.47069 ) );
 	 q=( Point_2( -3.33343, -6.23709 ) );
 	 r=( Point_2( 1.5496,-7.51756 ) );
-	if (IsPointAtRight( p, q, r )==true){
+	r_right_of_pq=IsPointAtRight( p, q, r );
+	if (r_right_of_pq==true){
 		  std::cout<<"r is at right of pq"<<std::endl;
 	}else{  std::cout<<"r is NOT at right of pq"<<std::endl;}
 
