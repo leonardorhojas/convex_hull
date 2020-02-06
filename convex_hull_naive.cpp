@@ -80,7 +80,9 @@ int main(int argc, char* argv[])
 		}
 	}
 
- 
+  for(int i=0; i<results.size(); i=i+2)std::cout<<results[i]<<  ", "<< results2[i]<<std::endl;//output
+
+
  sort(results.begin(),results.end());
  sort(results2.begin(),results2.end());
  //CGAL::spatial_sort(results.begin(),results.end());
