@@ -42,7 +42,7 @@ int main(int argc, char* argv[])
 	
 	/* Generar puntos aleatorios y los asigna a un Vector de puntos points */
 	 Points points, results,results2;
-     Point_2 p1,p2,p3;
+     Point_2 p,q,r;
 	 Segments resulting_segments;
 /*	 
 	for (int i=0; i<5; i++){
@@ -94,34 +94,7 @@ int main(int argc, char* argv[])
 	}
     */
 
-//Validación incremental izquierda
-p1=points[0];
-p2=points[1];
-p3=points[2];
 
-   for (int i=3;i<=points.size();i++){
-       if (i<points.size()){
-       results.push_back(p1);}
-       else {
-           results.push_back(p3);
-       }
-
-       while(IsPointAtRight( p1, p2, p3 )!=true && i<points.size())
-       {
-        p3=p2;
-        if(i<points.size() ){
-            p3=points[i];
-            }else
-            {
-                results.push_back(p3);
-            }
-            
-        i++;
-       }
-       p1=p2;
-
-
-   }
 
 
 /* imprimir el vector de puntos originados*/
@@ -138,8 +111,41 @@ p3=points[2];
  for(int i=0; i<points.size(); i++)std::cout<<points[i]<<std::endl;//output
 
 
+//Validación incremental izquierda
+p=points[0];
+q=points[1];
+r=points[2];
+
+   for (int i=3;i<=points.size();i++){
+       results.push_back(p)
+
+       while(IsPointAtRight( p, q, r )!=true && i<points.size())
+       {
+        r=q;
+        if(i<points.size() ){
+            r=points[i];
+            }else
+            {
+                results.push_back(r);
+            }
+        if (i<points.size()-2)  {
+        i++;
+        }
+
+       }
+
+       if (i=points.size){
+           results.push_back(q);
+           results.push_back(r);
+       } else{
+       p=q;
+       }
+       
+
+   }
 
 
+ for(int i=0; i<results.size(); i++)std::cout<<results[i]<<std::endl;//output
 
 return 0;
 }
