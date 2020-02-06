@@ -128,7 +128,7 @@ r=points[2];
             {
                 results.push_back(r);
             }
-        if (i<points.size()-2)  {
+        if (i<points.size()-1)  {
         i++;
         }
 
