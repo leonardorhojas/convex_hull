@@ -85,8 +85,9 @@ int main(int argc, char* argv[])
   std::cout<<"******"<<std::endl;
 
 
- sort(results.begin(),results.end());
- sort(results2.begin(),results2.end());
+ //sort(results.begin(),results.end());
+   CGAL::hilbert_sort (v.begin(), v.end());  
+ // sort(results2.begin(),results2.end());
  //CGAL::spatial_sort(results.begin(),results.end());
 
 
