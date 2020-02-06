@@ -136,7 +136,7 @@ r=points[2];
 
        if (i=points.size()){
          results.push_back(r);
-         if(IsPointAtRight( p, q, r )==true){  results.push_back(q);}
+         if(IsPointAtRight( p, q, r )!=true){  results.push_back(q);}
        } else{
        p=q;
        }
