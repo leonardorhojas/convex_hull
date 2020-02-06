@@ -134,7 +134,7 @@ r=points[2];
 
        }
 
-       if (i=points.size){
+       if (i=points.size()){
            results.push_back(q);
            results.push_back(r);
        } else{
