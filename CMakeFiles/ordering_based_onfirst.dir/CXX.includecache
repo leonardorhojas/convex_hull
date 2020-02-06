@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/usr/local/bin/CGAL-5.0.1/examples/Custom/ordering_based_onfirst.cpp
+iostream
+-
+string
+-
+vector
+-
+algorithm
+-
+functional
+-
+cassert
+-
+iomanip
+-
+numeric
+-
+

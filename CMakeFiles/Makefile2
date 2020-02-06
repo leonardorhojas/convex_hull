@@ -66,7 +66,7 @@ CMAKE_BINARY_DIR = /usr/local/bin/CGAL-5.0.1/examples/Custom
 CMakeFiles/sortingspatial.dir/all:
 	$(MAKE) -f CMakeFiles/sortingspatial.dir/build.make CMakeFiles/sortingspatial.dir/depend
 	$(MAKE) -f CMakeFiles/sortingspatial.dir/build.make CMakeFiles/sortingspatial.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/usr/local/bin/CGAL-5.0.1/examples/Custom/CMakeFiles --progress-num=13,14 "Built target sortingspatial"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/usr/local/bin/CGAL-5.0.1/examples/Custom/CMakeFiles --progress-num=15,16 "Built target sortingspatial"
 .PHONY : CMakeFiles/sortingspatial.dir/all
 
 # Include target in all.
@@ -103,7 +103,7 @@ clean: CMakeFiles/sortingspatial.dir/clean
 CMakeFiles/sorting_sphere.dir/all:
 	$(MAKE) -f CMakeFiles/sorting_sphere.dir/build.make CMakeFiles/sorting_sphere.dir/depend
 	$(MAKE) -f CMakeFiles/sorting_sphere.dir/build.make CMakeFiles/sorting_sphere.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/usr/local/bin/CGAL-5.0.1/examples/Custom/CMakeFiles --progress-num=11,12 "Built target sorting_sphere"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/usr/local/bin/CGAL-5.0.1/examples/Custom/CMakeFiles --progress-num=13,14 "Built target sorting_sphere"
 .PHONY : CMakeFiles/sorting_sphere.dir/all
 
 # Include target in all.
@@ -140,7 +140,7 @@ clean: CMakeFiles/sorting_sphere.dir/clean
 CMakeFiles/sorting.dir/all:
 	$(MAKE) -f CMakeFiles/sorting.dir/build.make CMakeFiles/sorting.dir/depend
 	$(MAKE) -f CMakeFiles/sorting.dir/build.make CMakeFiles/sorting.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/usr/local/bin/CGAL-5.0.1/examples/Custom/CMakeFiles --progress-num=9,10 "Built target sorting"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/usr/local/bin/CGAL-5.0.1/examples/Custom/CMakeFiles --progress-num=11,12 "Built target sorting"
 .PHONY : CMakeFiles/sorting.dir/all
 
 # Include target in all.
@@ -199,6 +199,43 @@ CMakeFiles/ALL_CGAL_TARGETS.dir/clean:
 
 # clean rule for target.
 clean: CMakeFiles/ALL_CGAL_TARGETS.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/ordering_based_onfirst.dir
+
+# All Build rule for target.
+CMakeFiles/ordering_based_onfirst.dir/all:
+	$(MAKE) -f CMakeFiles/ordering_based_onfirst.dir/build.make CMakeFiles/ordering_based_onfirst.dir/depend
+	$(MAKE) -f CMakeFiles/ordering_based_onfirst.dir/build.make CMakeFiles/ordering_based_onfirst.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/usr/local/bin/CGAL-5.0.1/examples/Custom/CMakeFiles --progress-num=7,8 "Built target ordering_based_onfirst"
+.PHONY : CMakeFiles/ordering_based_onfirst.dir/all
+
+# Include target in all.
+all: CMakeFiles/ordering_based_onfirst.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/ordering_based_onfirst.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /usr/local/bin/CGAL-5.0.1/examples/Custom/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/ordering_based_onfirst.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /usr/local/bin/CGAL-5.0.1/examples/Custom/CMakeFiles 0
+.PHONY : CMakeFiles/ordering_based_onfirst.dir/rule
+
+# Convenience name for target.
+ordering_based_onfirst: CMakeFiles/ordering_based_onfirst.dir/rule
+
+.PHONY : ordering_based_onfirst
+
+# clean rule for target.
+CMakeFiles/ordering_based_onfirst.dir/clean:
+	$(MAKE) -f CMakeFiles/ordering_based_onfirst.dir/build.make CMakeFiles/ordering_based_onfirst.dir/clean
+.PHONY : CMakeFiles/ordering_based_onfirst.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/ordering_based_onfirst.dir/clean
 
 .PHONY : clean
 
@@ -272,39 +309,39 @@ clean: CMakeFiles/cgal_check_build_system.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/convex_hull_naive.dir
+# Target rules for target CMakeFiles/simple_sort.dir
 
 # All Build rule for target.
-CMakeFiles/convex_hull_naive.dir/all:
-	$(MAKE) -f CMakeFiles/convex_hull_naive.dir/build.make CMakeFiles/convex_hull_naive.dir/depend
-	$(MAKE) -f CMakeFiles/convex_hull_naive.dir/build.make CMakeFiles/convex_hull_naive.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/usr/local/bin/CGAL-5.0.1/examples/Custom/CMakeFiles --progress-num=5,6 "Built target convex_hull_naive"
-.PHONY : CMakeFiles/convex_hull_naive.dir/all
+CMakeFiles/simple_sort.dir/all:
+	$(MAKE) -f CMakeFiles/simple_sort.dir/build.make CMakeFiles/simple_sort.dir/depend
+	$(MAKE) -f CMakeFiles/simple_sort.dir/build.make CMakeFiles/simple_sort.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/usr/local/bin/CGAL-5.0.1/examples/Custom/CMakeFiles --progress-num=9,10 "Built target simple_sort"
+.PHONY : CMakeFiles/simple_sort.dir/all
 
 # Include target in all.
-all: CMakeFiles/convex_hull_naive.dir/all
+all: CMakeFiles/simple_sort.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/convex_hull_naive.dir/rule: cmake_check_build_system
+CMakeFiles/simple_sort.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /usr/local/bin/CGAL-5.0.1/examples/Custom/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/convex_hull_naive.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/simple_sort.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /usr/local/bin/CGAL-5.0.1/examples/Custom/CMakeFiles 0
-.PHONY : CMakeFiles/convex_hull_naive.dir/rule
+.PHONY : CMakeFiles/simple_sort.dir/rule
 
 # Convenience name for target.
-convex_hull_naive: CMakeFiles/convex_hull_naive.dir/rule
+simple_sort: CMakeFiles/simple_sort.dir/rule
 
-.PHONY : convex_hull_naive
-
-# clean rule for target.
-CMakeFiles/convex_hull_naive.dir/clean:
-	$(MAKE) -f CMakeFiles/convex_hull_naive.dir/build.make CMakeFiles/convex_hull_naive.dir/clean
-.PHONY : CMakeFiles/convex_hull_naive.dir/clean
+.PHONY : simple_sort
 
 # clean rule for target.
-clean: CMakeFiles/convex_hull_naive.dir/clean
+CMakeFiles/simple_sort.dir/clean:
+	$(MAKE) -f CMakeFiles/simple_sort.dir/build.make CMakeFiles/simple_sort.dir/clean
+.PHONY : CMakeFiles/simple_sort.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/simple_sort.dir/clean
 
 .PHONY : clean
 
@@ -346,39 +383,39 @@ clean: CMakeFiles/convex_hull.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/simple_sort.dir
+# Target rules for target CMakeFiles/convex_hull_naive.dir
 
 # All Build rule for target.
-CMakeFiles/simple_sort.dir/all:
-	$(MAKE) -f CMakeFiles/simple_sort.dir/build.make CMakeFiles/simple_sort.dir/depend
-	$(MAKE) -f CMakeFiles/simple_sort.dir/build.make CMakeFiles/simple_sort.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/usr/local/bin/CGAL-5.0.1/examples/Custom/CMakeFiles --progress-num=7,8 "Built target simple_sort"
-.PHONY : CMakeFiles/simple_sort.dir/all
+CMakeFiles/convex_hull_naive.dir/all:
+	$(MAKE) -f CMakeFiles/convex_hull_naive.dir/build.make CMakeFiles/convex_hull_naive.dir/depend
+	$(MAKE) -f CMakeFiles/convex_hull_naive.dir/build.make CMakeFiles/convex_hull_naive.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/usr/local/bin/CGAL-5.0.1/examples/Custom/CMakeFiles --progress-num=5,6 "Built target convex_hull_naive"
+.PHONY : CMakeFiles/convex_hull_naive.dir/all
 
 # Include target in all.
-all: CMakeFiles/simple_sort.dir/all
+all: CMakeFiles/convex_hull_naive.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/simple_sort.dir/rule: cmake_check_build_system
+CMakeFiles/convex_hull_naive.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /usr/local/bin/CGAL-5.0.1/examples/Custom/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/simple_sort.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/convex_hull_naive.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /usr/local/bin/CGAL-5.0.1/examples/Custom/CMakeFiles 0
-.PHONY : CMakeFiles/simple_sort.dir/rule
+.PHONY : CMakeFiles/convex_hull_naive.dir/rule
 
 # Convenience name for target.
-simple_sort: CMakeFiles/simple_sort.dir/rule
+convex_hull_naive: CMakeFiles/convex_hull_naive.dir/rule
 
-.PHONY : simple_sort
-
-# clean rule for target.
-CMakeFiles/simple_sort.dir/clean:
-	$(MAKE) -f CMakeFiles/simple_sort.dir/build.make CMakeFiles/simple_sort.dir/clean
-.PHONY : CMakeFiles/simple_sort.dir/clean
+.PHONY : convex_hull_naive
 
 # clean rule for target.
-clean: CMakeFiles/simple_sort.dir/clean
+CMakeFiles/convex_hull_naive.dir/clean:
+	$(MAKE) -f CMakeFiles/convex_hull_naive.dir/build.make CMakeFiles/convex_hull_naive.dir/clean
+.PHONY : CMakeFiles/convex_hull_naive.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/convex_hull_naive.dir/clean
 
 .PHONY : clean
 

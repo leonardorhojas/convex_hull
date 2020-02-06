@@ -31,8 +31,6 @@ CGAL/Delaunay_triangulation_2.h
 -
 CGAL/spatial_sort.h
 -
-iostream
--
 string
 -
 algorithm

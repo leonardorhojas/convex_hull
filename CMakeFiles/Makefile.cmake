@@ -64,9 +64,10 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/sorting_sphere.dir/DependInfo.cmake"
   "CMakeFiles/sorting.dir/DependInfo.cmake"
   "CMakeFiles/ALL_CGAL_TARGETS.dir/DependInfo.cmake"
+  "CMakeFiles/ordering_based_onfirst.dir/DependInfo.cmake"
   "CMakeFiles/array_convex_hull_2.dir/DependInfo.cmake"
   "CMakeFiles/cgal_check_build_system.dir/DependInfo.cmake"
-  "CMakeFiles/convex_hull_naive.dir/DependInfo.cmake"
-  "CMakeFiles/convex_hull.dir/DependInfo.cmake"
   "CMakeFiles/simple_sort.dir/DependInfo.cmake"
+  "CMakeFiles/convex_hull.dir/DependInfo.cmake"
+  "CMakeFiles/convex_hull_naive.dir/DependInfo.cmake"
   )

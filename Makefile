@@ -163,6 +163,19 @@ ALL_CGAL_TARGETS/fast:
 .PHONY : ALL_CGAL_TARGETS/fast
 
 #=============================================================================
+# Target rules for targets named ordering_based_onfirst
+
+# Build rule for target.
+ordering_based_onfirst: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ordering_based_onfirst
+.PHONY : ordering_based_onfirst
+
+# fast build rule for target.
+ordering_based_onfirst/fast:
+	$(MAKE) -f CMakeFiles/ordering_based_onfirst.dir/build.make CMakeFiles/ordering_based_onfirst.dir/build
+.PHONY : ordering_based_onfirst/fast
+
+#=============================================================================
 # Target rules for targets named array_convex_hull_2
 
 # Build rule for target.
@@ -189,17 +202,17 @@ cgal_check_build_system/fast:
 .PHONY : cgal_check_build_system/fast
 
 #=============================================================================
-# Target rules for targets named convex_hull_naive
+# Target rules for targets named simple_sort
 
 # Build rule for target.
-convex_hull_naive: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 convex_hull_naive
-.PHONY : convex_hull_naive
+simple_sort: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 simple_sort
+.PHONY : simple_sort
 
 # fast build rule for target.
-convex_hull_naive/fast:
-	$(MAKE) -f CMakeFiles/convex_hull_naive.dir/build.make CMakeFiles/convex_hull_naive.dir/build
-.PHONY : convex_hull_naive/fast
+simple_sort/fast:
+	$(MAKE) -f CMakeFiles/simple_sort.dir/build.make CMakeFiles/simple_sort.dir/build
+.PHONY : simple_sort/fast
 
 #=============================================================================
 # Target rules for targets named convex_hull
@@ -215,17 +228,17 @@ convex_hull/fast:
 .PHONY : convex_hull/fast
 
 #=============================================================================
-# Target rules for targets named simple_sort
+# Target rules for targets named convex_hull_naive
 
 # Build rule for target.
-simple_sort: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 simple_sort
-.PHONY : simple_sort
+convex_hull_naive: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 convex_hull_naive
+.PHONY : convex_hull_naive
 
 # fast build rule for target.
-simple_sort/fast:
-	$(MAKE) -f CMakeFiles/simple_sort.dir/build.make CMakeFiles/simple_sort.dir/build
-.PHONY : simple_sort/fast
+convex_hull_naive/fast:
+	$(MAKE) -f CMakeFiles/convex_hull_naive.dir/build.make CMakeFiles/convex_hull_naive.dir/build
+.PHONY : convex_hull_naive/fast
 
 array_convex_hull_2.o: array_convex_hull_2.cpp.o
 
@@ -307,6 +320,33 @@ convex_hull_naive.s: convex_hull_naive.cpp.s
 convex_hull_naive.cpp.s:
 	$(MAKE) -f CMakeFiles/convex_hull_naive.dir/build.make CMakeFiles/convex_hull_naive.dir/convex_hull_naive.cpp.s
 .PHONY : convex_hull_naive.cpp.s
+
+ordering_based_onfirst.o: ordering_based_onfirst.cpp.o
+
+.PHONY : ordering_based_onfirst.o
+
+# target to build an object file
+ordering_based_onfirst.cpp.o:
+	$(MAKE) -f CMakeFiles/ordering_based_onfirst.dir/build.make CMakeFiles/ordering_based_onfirst.dir/ordering_based_onfirst.cpp.o
+.PHONY : ordering_based_onfirst.cpp.o
+
+ordering_based_onfirst.i: ordering_based_onfirst.cpp.i
+
+.PHONY : ordering_based_onfirst.i
+
+# target to preprocess a source file
+ordering_based_onfirst.cpp.i:
+	$(MAKE) -f CMakeFiles/ordering_based_onfirst.dir/build.make CMakeFiles/ordering_based_onfirst.dir/ordering_based_onfirst.cpp.i
+.PHONY : ordering_based_onfirst.cpp.i
+
+ordering_based_onfirst.s: ordering_based_onfirst.cpp.s
+
+.PHONY : ordering_based_onfirst.s
+
+# target to generate assembly for a file
+ordering_based_onfirst.cpp.s:
+	$(MAKE) -f CMakeFiles/ordering_based_onfirst.dir/build.make CMakeFiles/ordering_based_onfirst.dir/ordering_based_onfirst.cpp.s
+.PHONY : ordering_based_onfirst.cpp.s
 
 simple_sort.o: simple_sort.cpp.o
 
@@ -428,11 +468,12 @@ help:
 	@echo "... sorting_sphere"
 	@echo "... sorting"
 	@echo "... ALL_CGAL_TARGETS"
+	@echo "... ordering_based_onfirst"
 	@echo "... array_convex_hull_2"
 	@echo "... cgal_check_build_system"
-	@echo "... convex_hull_naive"
-	@echo "... convex_hull"
 	@echo "... simple_sort"
+	@echo "... convex_hull"
+	@echo "... convex_hull_naive"
 	@echo "... array_convex_hull_2.o"
 	@echo "... array_convex_hull_2.i"
 	@echo "... array_convex_hull_2.s"
@@ -442,6 +483,9 @@ help:
 	@echo "... convex_hull_naive.o"
 	@echo "... convex_hull_naive.i"
 	@echo "... convex_hull_naive.s"
+	@echo "... ordering_based_onfirst.o"
+	@echo "... ordering_based_onfirst.i"
+	@echo "... ordering_based_onfirst.s"
 	@echo "... simple_sort.o"
 	@echo "... simple_sort.i"
 	@echo "... simple_sort.s"
