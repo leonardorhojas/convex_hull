@@ -89,21 +89,19 @@ r=points[2];
 
    for (int i=3;i<=points.size();i++){
        results.push_back(p);
-
+	std::cout<<i<<"->i"<<p<<"->p"<<q<<"->q"<<r<<"->i"<<std::endl;
        while(IsPointAtRight( p, q, r )!=true && i<points.size())
        {
         q=r;
         if(i<points.size() ){
             r=points[i];
+			i++;
+std::cout<<i<<"->i"<<p<<"->p"<<q<<"->q"<<r<<"->i"<<std::endl;
             }else
             {
                 results.push_back(r);
             }
-        if (i<=points.size())  {
-        i++;
-        }
-
-       }
+      }
 
        if (i=points.size()){
          results.push_back(r);
