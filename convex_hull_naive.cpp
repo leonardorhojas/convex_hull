@@ -156,10 +156,10 @@ int main(int argc, char* argv[])
 		}
 	}
 
- //CGAL::spatial_sort(results.begin(),results.end();
+ CGAL::spatial_sort(results.begin(),results.end());
 
 
- CGAL::hilbert_sort (results.begin(), v.end());  
+ //CGAL::hilbert_sort (results.begin(), v.end());  
  
  for(std::size_t i=0; i<size; ++i)std::cout<<results[i]<<std::endl;//output
 /*
