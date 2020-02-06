@@ -33,7 +33,7 @@ int main(int argc, char* argv[])
 {
 	
 	/* Generar puntos aleatorios y los asigna a un Vector de puntos points */
-	 Points points, results;
+	 Points points, results,results2;
 	 Segments resulting_segments;
 /*	 
 	for (int i=0; i<5; i++){
@@ -74,7 +74,7 @@ int main(int argc, char* argv[])
 			if (valid==true){
 			//resulting_segments.push_back( Segment_2(points[p] ,points[q]) )	;
       results.push_back(points[p]);
-      results.push_back(points[q]);
+      results2.push_back(points[q]);
 				}
 			}
 		}
@@ -82,12 +82,13 @@ int main(int argc, char* argv[])
 
  
  sort(results.begin(),results.end());
+ sort(results2.begin(),results2.end());
  //CGAL::spatial_sort(results.begin(),results.end());
 
 
  //CGAL::hilbert_sort (results.begin(), v.end());  
  
- for(int i=0; i<results.size(); i=i+2)std::cout<<results[i]<<  ", "<< results[i+1]<<std::endl;//output
+ for(int i=0; i<results.size(); i=i+2)std::cout<<results[i]<<  ", "<< results2[i]<<std::endl;//output
 
 
 /*
