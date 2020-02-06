@@ -12,7 +12,7 @@
 typedef CGAL::Exact_predicates_inexact_constructions_kernel K;
 typedef K::Point_2 Point_2;
 typedef K::Segment_2 Segment_2;
-typedef std::vector<Point> Points;
+typedef std::vector<Point_2> Points;
 typedef std::vector<Segment_2> Segments;
 typedef CGAL::Creator_uniform_2<double,Point>               Creator;
 
@@ -156,12 +156,16 @@ int main(int argc, char* argv[])
 		}
 	}
 
- CGAL::spatial_sort(results.begin(),results.end());
+ 
+ sort(results.begin(),results.end());
+ //CGAL::spatial_sort(results.begin(),results.end());
 
 
  //CGAL::hilbert_sort (results.begin(), v.end());  
  
  for(std::size_t i=0; i<size; ++i)std::cout<<results[i]<<std::endl;//output
+
+
 /*
  for(int i = 0; i < results.size(); i=i+2){
 
