@@ -1,0 +1,1 @@
+/bin/c++    -rdynamic CMakeFiles/simple_sort.dir/simple_sort.cpp.o  -o simple_sort -Wl,-rpath,/usr/local/lib64 /usr/local/lib64/libCGAL.so.13.0.3 -lmpfr -lgmp 
