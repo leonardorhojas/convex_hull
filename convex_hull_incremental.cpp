@@ -37,66 +37,6 @@ bool IsPointAtRight( const _TPoint& p, const _TPoint& q, const _TPoint& r )
 }
 
 
- 
-template <typename T, typename Compare>
-void getSortPermutation(
-    std::vector<unsigned>& out,
-    const std::vector<T>& v,
-    Compare compare = std::less<T>())
-{
-    out.resize(v.size());
-    std::iota(out.begin(), out.end(), 0);
- 
-    std::sort(out.begin(), out.end(),
-        [&](unsigned i, unsigned j){ return compare(v[i], v[j]); });
-}
- 
-template <typename T>
-void applyPermutation(
-    const std::vector<unsigned>& order,
-    std::vector<T>& t)
-{
-    assert(order.size() == t.size());
-    std::vector<T> st(t.size());
-    for(unsigned i=0; i<t.size(); i++)
-    {
-        st[i] = t[order[i]];
-    }
-    t = st;
-}
- 
-template <typename T, typename... S>
-void applyPermutation(
-    const std::vector<unsigned>& order,
-    std::vector<T>& t,
-    std::vector<S>&... s)
-{
-    applyPermutation(order, t);
-    applyPermutation(order, s...);
-}
- 
-// sort multiple vectors using the criteria of the first one
-template<typename T, typename Compare, typename... SS>
-void sortVectors(
-    const std::vector<T>& t,
-    Compare comp,
-    std::vector<SS>&... ss)
-{
-    std::vector<unsigned> order;
-    getSortPermutation(order, t, comp);
-    applyPermutation(order, ss...);
-}
- 
-// make less verbose for the usual ascending order
-template<typename T, typename... SS>
-void sortVectorsAscending(
-    const std::vector<T>& t,
-    std::vector<SS>&... ss)
-{
-    sortVectors(t, std::less<T>(), ss...);
-}
- 
-
 int main(int argc, char* argv[])
 {
 	
@@ -104,7 +44,10 @@ int main(int argc, char* argv[])
 	 Points points, results,results2;
 	 Segments resulting_segments;
 /*	 
-Generación puntos aleatorios segun profesor Leonardo
+	for (int i=0; i<5; i++){
+	points.push_back(Point_2(rand(),rand()));
+	}
+
 */
 
   unsigned long n = 10;
@@ -121,8 +64,9 @@ Generación puntos aleatorios segun profesor Leonardo
     points.push_back( Point_2( x, y ) );
   } // end for
 	
-	
+
 /*Crear vector de Segmentos de linea p-q*/
+/*	
 	for (int p=0; p<points.size();p++)
 	{
 		for (int q=0; q<points.size();q++)
@@ -135,7 +79,8 @@ Generación puntos aleatorios segun profesor Leonardo
 					
 				}
 
-/*Genera vector de segmentos de linea*/       
+/*Genera vector de segmentos de linea*/    
+/*   
 			if (valid==true){
 			//resulting_segments.push_back( Segment_2(points[p] ,points[q]) )	;
       results.push_back(points[p]);
@@ -144,20 +89,24 @@ Generación puntos aleatorios segun profesor Leonardo
 			}
 		}
 	}
+    */
 
-  for(int i=0; i<results.size(); i++)std::cout<<"("<<results[i]<<  "),("<< results2[i]<<")"<<std::endl;//output
+
+/* imprimir el vector de puntos originados*/
+  for(int i=0; i<points.size(); i++)std::cout<<"("<<points[i]<< std::endl;//output
 
   std::cout<<"******"<<std::endl;
-
-
- //sort(results.begin(),results.end());
   std::cout<<"******"<<std::endl;
-  
-  //Organiza vectores según la coordenada X  https://tuket.github.io/2017-09-30-sorting-multiple-vectors-in-the-same-way-using-c-variadic-templates/
-  sortVectors(results, std::less<Point_2>(), results, results2);
+  //Ordenar vector de puntos por la coordenada X
+  sort(points.begin(),points.end());
 
 
-for(int i=0; i<results.size(); i++)std::cout<<results[i]<<  ", "<< results2[i]<<std::endl;//output
+ //CGAL::hilbert_sort (results.begin(), v.end());  
+ 
+ for(int i=0; i<points.size(); i++)std::cout<<points[i]<<std::endl;//output
+
+
+
 
 
 return 0;
