@@ -158,7 +158,7 @@ int main(int argc, char* argv[])
    //CGAL::hilbert_sort (results.begin(), results.end());  
  // sort(results2.begin(),results2.end());
  //CGAL::spatial_sort(results.begin(),results.end());
-  sortVectors(results, std::tolower<Point_2>(), results, results2);
+  sortVectors(results, std::less<Point_2>(), results, results2);
 
 
  //CGAL::hilbert_sort (results.begin(), v.end());  
