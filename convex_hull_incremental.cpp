@@ -42,6 +42,7 @@ int main(int argc, char* argv[])
 	
 	/* Generar puntos aleatorios y los asigna a un Vector de puntos points */
 	 Points points, results,results2;
+     Point_2 p1,p2,p3;
 	 Segments resulting_segments;
 /*	 
 	for (int i=0; i<5; i++){
@@ -50,6 +51,8 @@ int main(int argc, char* argv[])
 
 */
 
+
+//generacion aleatoria de puntos version Profeso Leonardo
   unsigned long n = 10;
   if( argc > 1 )
     n = std::atoi( argv[ 1 ] );
@@ -91,9 +94,33 @@ int main(int argc, char* argv[])
 	}
     */
 
+//Validación incremental izquierda
+p1=points[0];
+p2=points[1];
+p3=points[2];
+
+   for (int i=3;i<points.size();i++){
+       results.push_back(p1);
+       while(IsPointAtRight( points[p1], points[p2], points[p3] )!=true && i<points.size()-1)
+       {
+        p2=p3;
+        if(i<points.size()-1 ){
+        p3=points[i];
+            }else
+            {
+                results.push_back(p2);
+            }
+            
+        i++;
+       }
+       p1=p2;
+
+
+   }
+
 
 /* imprimir el vector de puntos originados*/
-  for(int i=0; i<points.size(); i++)std::cout<<"("<<points[i]<< std::endl;//output
+  for(int i=0; i<points.size(); i++)std::cout<<"("<<points[i]<<")"<< std::endl;//output
 
   std::cout<<"******"<<std::endl;
   std::cout<<"******"<<std::endl;
