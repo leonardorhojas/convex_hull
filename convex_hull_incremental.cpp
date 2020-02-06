@@ -82,7 +82,7 @@ int main(int argc, char* argv[])
 /*Genera vector de segmentos de linea*/    
 /*   
 			if (valid==true){
-			//resulting_segments.push_back( Segment_2(points[p] ,points[q]) )	;
+			//resulting_segments.push_back(  Segment_2(points[p] ,points[q]) )	;
       results.push_back(points[p]);
       results2.push_back(points[q]);
 				}
