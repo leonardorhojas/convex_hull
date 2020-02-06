@@ -80,7 +80,7 @@ int main(int argc, char* argv[])
 		}
 	}
 
-  for(int i=0; i<results.size(); i=i+2)std::cout<<results[i]<<  ", "<< results2[i]<<std::endl;//output
+  for(int i=0; i<results.size(); i++)std::cout<<results[i]<<  ", "<< results2[i]<<std::endl;//output
 
   std::cout<<"******"<<std::endl;
 
@@ -92,7 +92,7 @@ int main(int argc, char* argv[])
 
  //CGAL::hilbert_sort (results.begin(), v.end());  
  
- for(int i=0; i<results.size(); i=i+2)std::cout<<results[i]<<  ", "<< results2[i]<<std::endl;//output
+ for(int i=0; i<results.size(); i++)std::cout<<results[i]<<  ", "<< results2[i]<<std::endl;//output
 
 
 /*
