@@ -12,7 +12,7 @@
 typedef CGAL::Exact_predicates_inexact_constructions_kernel K;
 typedef K::Point_2 Point_2;
 typedef K::Segment_2 Segment_2;
-typedef std::vector<Point_2> Points;
+typedef std::vector<Point> Points;
 typedef std::vector<Segment_2> Segments;
 typedef CGAL::Creator_uniform_2<double,Point>               Creator;
 
