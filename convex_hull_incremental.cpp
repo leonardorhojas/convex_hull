@@ -68,35 +68,6 @@ int main(int argc, char* argv[])
   } // end for
 	
 
-/*Crear vector de Segmentos de linea p-q*/
-/*	
-	for (int p=0; p<points.size();p++)
-	{
-		for (int q=0; q<points.size();q++)
-		{
-			if (p!=q){
-				bool valid=true;
-			for (int r=0;r<points.size();r++)
-				if(r!=p and r!=q){
-				 valid &= IsPointAtRight( points[p], points[q], points[r] );
-					
-				}
-
-/*Genera vector de segmentos de linea*/    
-/*   
-			if (valid==true){
-			//resulting_segments.push_back(  Segment_2(points[p] ,points[q]) )	;
-      results.push_back(points[p]);
-      results2.push_back(points[q]);
-				}
-			}
-		}
-	}
-    */
-
-
-
-
 /* imprimir el vector de puntos originados*/
   for(int i=0; i<points.size(); i++)std::cout<<"("<<points[i]<<")"<< std::endl;//output
 
