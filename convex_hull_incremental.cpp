@@ -121,14 +121,14 @@ r=points[2];
 
        while(IsPointAtRight( p, q, r )!=true && i<points.size())
        {
-        r=q;
+        q=r;
         if(i<points.size() ){
             r=points[i];
             }else
             {
                 results.push_back(r);
             }
-        if (i<points.size()-1)  {
+        if (i<=points.size())  {
         i++;
         }
 
