@@ -25,17 +25,6 @@ typedef std::vector<Segment_2> Segments;
 
 
 // -------------------------------------------------------------------------
-template< class _TPoint >
-bool IsPointAtRight( const _TPoint& p, const _TPoint& q, const _TPoint& r )
-{
-  double qpX = double( q[ 0 ] - p[ 0 ] );
-  double qpY = double( q[ 1 ] - p[ 1 ] );
-  double rpX = double( r[ 0 ] - p[ 0 ] );
-  double rpY = double( r[ 1 ] - p[ 1 ] );
-
-  return( qpX * rpY > rpX * qpY );
-}
-
 
 int main(int argc, char* argv[])
 {
@@ -90,7 +79,7 @@ r=points[2];
    for (int i=3;i<=points.size();i++){
        results.push_back(p);
 	   std::cout<<"|FOR|" <<i<<"->i|"<<points.size()<<"->points.size()| "<<p<<"->p|"<<q<<"->q|"<<r<<"->r|"<<std::endl;
-       while(IsPointAtRight( p, q, r )!=true && i<points.size())
+       while(right_turn(p, q, r)!=true && i<points.size())
        {
         q=r;
         if(i<points.size() ){
@@ -105,7 +94,7 @@ r=points[2];
        std::cout<<"|FOR2|" <<i<<"->i|" <<points.size()<<"->points.size()| " <<p<<"->p|"<<q<<"->q|"<<r<<"->r|"<<std::endl;
        if (i==points.size()){
          results.push_back(r);
-         if(IsPointAtRight( p, q, r )!=true){  results.push_back(q);}
+         if(right_turn(p, q, r)!=true){  results.push_back(q);}
 		 std::cout<<"|FOR3|" <<i<<"->i|" <<points.size()<<"->points.size()| " <<p<<"->p|"<<q<<"->q|"<<r<<"->r|"<<std::endl;
 
        } else{

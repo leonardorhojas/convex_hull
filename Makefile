@@ -150,17 +150,17 @@ sorting/fast:
 .PHONY : sorting/fast
 
 #=============================================================================
-# Target rules for targets named ALL_CGAL_TARGETS
+# Target rules for targets named is_at_right
 
 # Build rule for target.
-ALL_CGAL_TARGETS: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ALL_CGAL_TARGETS
-.PHONY : ALL_CGAL_TARGETS
+is_at_right: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 is_at_right
+.PHONY : is_at_right
 
 # fast build rule for target.
-ALL_CGAL_TARGETS/fast:
-	$(MAKE) -f CMakeFiles/ALL_CGAL_TARGETS.dir/build.make CMakeFiles/ALL_CGAL_TARGETS.dir/build
-.PHONY : ALL_CGAL_TARGETS/fast
+is_at_right/fast:
+	$(MAKE) -f CMakeFiles/is_at_right.dir/build.make CMakeFiles/is_at_right.dir/build
+.PHONY : is_at_right/fast
 
 #=============================================================================
 # Target rules for targets named ordering_based_onfirst
@@ -226,6 +226,32 @@ convex_hull: cmake_check_build_system
 convex_hull/fast:
 	$(MAKE) -f CMakeFiles/convex_hull.dir/build.make CMakeFiles/convex_hull.dir/build
 .PHONY : convex_hull/fast
+
+#=============================================================================
+# Target rules for targets named ALL_CGAL_TARGETS
+
+# Build rule for target.
+ALL_CGAL_TARGETS: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ALL_CGAL_TARGETS
+.PHONY : ALL_CGAL_TARGETS
+
+# fast build rule for target.
+ALL_CGAL_TARGETS/fast:
+	$(MAKE) -f CMakeFiles/ALL_CGAL_TARGETS.dir/build.make CMakeFiles/ALL_CGAL_TARGETS.dir/build
+.PHONY : ALL_CGAL_TARGETS/fast
+
+#=============================================================================
+# Target rules for targets named convex_hull_incremental
+
+# Build rule for target.
+convex_hull_incremental: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 convex_hull_incremental
+.PHONY : convex_hull_incremental
+
+# fast build rule for target.
+convex_hull_incremental/fast:
+	$(MAKE) -f CMakeFiles/convex_hull_incremental.dir/build.make CMakeFiles/convex_hull_incremental.dir/build
+.PHONY : convex_hull_incremental/fast
 
 #=============================================================================
 # Target rules for targets named convex_hull_naive
@@ -294,6 +320,33 @@ convex_hull.cpp.s:
 	$(MAKE) -f CMakeFiles/convex_hull.dir/build.make CMakeFiles/convex_hull.dir/convex_hull.cpp.s
 .PHONY : convex_hull.cpp.s
 
+convex_hull_incremental.o: convex_hull_incremental.cpp.o
+
+.PHONY : convex_hull_incremental.o
+
+# target to build an object file
+convex_hull_incremental.cpp.o:
+	$(MAKE) -f CMakeFiles/convex_hull_incremental.dir/build.make CMakeFiles/convex_hull_incremental.dir/convex_hull_incremental.cpp.o
+.PHONY : convex_hull_incremental.cpp.o
+
+convex_hull_incremental.i: convex_hull_incremental.cpp.i
+
+.PHONY : convex_hull_incremental.i
+
+# target to preprocess a source file
+convex_hull_incremental.cpp.i:
+	$(MAKE) -f CMakeFiles/convex_hull_incremental.dir/build.make CMakeFiles/convex_hull_incremental.dir/convex_hull_incremental.cpp.i
+.PHONY : convex_hull_incremental.cpp.i
+
+convex_hull_incremental.s: convex_hull_incremental.cpp.s
+
+.PHONY : convex_hull_incremental.s
+
+# target to generate assembly for a file
+convex_hull_incremental.cpp.s:
+	$(MAKE) -f CMakeFiles/convex_hull_incremental.dir/build.make CMakeFiles/convex_hull_incremental.dir/convex_hull_incremental.cpp.s
+.PHONY : convex_hull_incremental.cpp.s
+
 convex_hull_naive.o: convex_hull_naive.cpp.o
 
 .PHONY : convex_hull_naive.o
@@ -320,6 +373,33 @@ convex_hull_naive.s: convex_hull_naive.cpp.s
 convex_hull_naive.cpp.s:
 	$(MAKE) -f CMakeFiles/convex_hull_naive.dir/build.make CMakeFiles/convex_hull_naive.dir/convex_hull_naive.cpp.s
 .PHONY : convex_hull_naive.cpp.s
+
+is_at_right.o: is_at_right.cpp.o
+
+.PHONY : is_at_right.o
+
+# target to build an object file
+is_at_right.cpp.o:
+	$(MAKE) -f CMakeFiles/is_at_right.dir/build.make CMakeFiles/is_at_right.dir/is_at_right.cpp.o
+.PHONY : is_at_right.cpp.o
+
+is_at_right.i: is_at_right.cpp.i
+
+.PHONY : is_at_right.i
+
+# target to preprocess a source file
+is_at_right.cpp.i:
+	$(MAKE) -f CMakeFiles/is_at_right.dir/build.make CMakeFiles/is_at_right.dir/is_at_right.cpp.i
+.PHONY : is_at_right.cpp.i
+
+is_at_right.s: is_at_right.cpp.s
+
+.PHONY : is_at_right.s
+
+# target to generate assembly for a file
+is_at_right.cpp.s:
+	$(MAKE) -f CMakeFiles/is_at_right.dir/build.make CMakeFiles/is_at_right.dir/is_at_right.cpp.s
+.PHONY : is_at_right.cpp.s
 
 ordering_based_onfirst.o: ordering_based_onfirst.cpp.o
 
@@ -467,12 +547,14 @@ help:
 	@echo "... sortingspatial"
 	@echo "... sorting_sphere"
 	@echo "... sorting"
-	@echo "... ALL_CGAL_TARGETS"
+	@echo "... is_at_right"
 	@echo "... ordering_based_onfirst"
 	@echo "... array_convex_hull_2"
 	@echo "... cgal_check_build_system"
 	@echo "... simple_sort"
 	@echo "... convex_hull"
+	@echo "... ALL_CGAL_TARGETS"
+	@echo "... convex_hull_incremental"
 	@echo "... convex_hull_naive"
 	@echo "... array_convex_hull_2.o"
 	@echo "... array_convex_hull_2.i"
@@ -480,9 +562,15 @@ help:
 	@echo "... convex_hull.o"
 	@echo "... convex_hull.i"
 	@echo "... convex_hull.s"
+	@echo "... convex_hull_incremental.o"
+	@echo "... convex_hull_incremental.i"
+	@echo "... convex_hull_incremental.s"
 	@echo "... convex_hull_naive.o"
 	@echo "... convex_hull_naive.i"
 	@echo "... convex_hull_naive.s"
+	@echo "... is_at_right.o"
+	@echo "... is_at_right.i"
+	@echo "... is_at_right.s"
 	@echo "... ordering_based_onfirst.o"
 	@echo "... ordering_based_onfirst.i"
 	@echo "... ordering_based_onfirst.s"
