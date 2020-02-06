@@ -10,6 +10,13 @@
 #include <CGAL/hilbert_sort.h>
 #include <CGAL/Delaunay_triangulation_2.h>
 #include <CGAL/spatial_sort.h>
+#include <iostream>
+#include <string>
+#include <algorithm>
+#include <functional>
+#include <cassert>
+#include <iomanip>
+#include <numeric>
 
 typedef CGAL::Exact_predicates_inexact_constructions_kernel K;
 typedef K::Point_2 Point_2;
@@ -30,6 +37,66 @@ bool IsPointAtRight( const _TPoint& p, const _TPoint& q, const _TPoint& r )
   return( qpX * rpY > rpX * qpY );
 }
 
+
+ 
+template <typename T, typename Compare>
+void getSortPermutation(
+    std::vector<unsigned>& out,
+    const std::vector<T>& v,
+    Compare compare = std::less<T>())
+{
+    out.resize(v.size());
+    std::iota(out.begin(), out.end(), 0);
+ 
+    std::sort(out.begin(), out.end(),
+        [&](unsigned i, unsigned j){ return compare(v[i], v[j]); });
+}
+ 
+template <typename T>
+void applyPermutation(
+    const std::vector<unsigned>& order,
+    std::vector<T>& t)
+{
+    assert(order.size() == t.size());
+    std::vector<T> st(t.size());
+    for(unsigned i=0; i<t.size(); i++)
+    {
+        st[i] = t[order[i]];
+    }
+    t = st;
+}
+ 
+template <typename T, typename... S>
+void applyPermutation(
+    const std::vector<unsigned>& order,
+    std::vector<T>& t,
+    std::vector<S>&... s)
+{
+    applyPermutation(order, t);
+    applyPermutation(order, s...);
+}
+ 
+// sort multiple vectors using the criteria of the first one
+template<typename T, typename Compare, typename... SS>
+void sortVectors(
+    const std::vector<T>& t,
+    Compare comp,
+    std::vector<SS>&... ss)
+{
+    std::vector<unsigned> order;
+    getSortPermutation(order, t, comp);
+    applyPermutation(order, ss...);
+}
+ 
+// make less verbose for the usual ascending order
+template<typename T, typename... SS>
+void sortVectorsAscending(
+    const std::vector<T>& t,
+    std::vector<SS>&... ss)
+{
+    sortVectors(t, std::less<T>(), ss...);
+}
+ 
 
 int main(int argc, char* argv[])
 {
@@ -91,7 +158,8 @@ int main(int argc, char* argv[])
   std::cout<<"******"<<std::endl;
    //CGAL::hilbert_sort (results.begin(), results.end());  
  // sort(results2.begin(),results2.end());
- CGAL::spatial_sort(results.begin(),results.end());
+ //CGAL::spatial_sort(results.begin(),results.end());
+  sortVectors(results, greater<string>(), results, results2);
 
 
  //CGAL::hilbert_sort (results.begin(), v.end());  
