@@ -117,7 +117,7 @@ q=points[1];
 r=points[2];
 
    for (int i=3;i<=points.size();i++){
-       results.push_back(p)
+       results.push_back(p);
 
        while(IsPointAtRight( p, q, r )!=true && i<points.size())
        {
