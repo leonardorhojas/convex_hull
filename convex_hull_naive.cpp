@@ -81,7 +81,7 @@ int main(int argc, char* argv[])
 	}
 
  
- //sort(results.begin(),results.end());''
+ sort(results.begin(),results.end());
  //CGAL::spatial_sort(results.begin(),results.end());
 
 
