@@ -103,7 +103,7 @@ r=points[2];
             }
       }
        std::cout<<"|FOR2|" <<i<<"->i|" <<points.size()<<"->points.size()| " <<p<<"->p|"<<q<<"->q|"<<r<<"->r|"<<std::endl;
-       if (i=points.size()){
+       if (i==points.size()){
          results.push_back(r);
          if(IsPointAtRight( p, q, r )!=true){  results.push_back(q);}
 		 std::cout<<"|FOR3|" <<i<<"->i|" <<points.size()<<"->points.size()| " <<p<<"->p|"<<q<<"->q|"<<r<<"->r|"<<std::endl;
