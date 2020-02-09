@@ -25,10 +25,10 @@ typedef std::vector<Segment_2> Segments;
 
 
 //--------------------------------------------------------------------------
-template< class... Args >
-void Print_Vector (Args... args)
+template< class _TPrint >
+void Print_Vector (const _TPrint& p)
 {
-for(int i=0; i<args.size(); i++)std::cout << ... <<", "<<p[i]<<std::endl;//output
+for(int i=0; i<p.size(); i++)std::cout<<p[i]<<  ", "<< p[i]<<std::endl;//output
 }
 
 
