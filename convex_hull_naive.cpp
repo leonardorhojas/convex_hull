@@ -167,7 +167,7 @@ std::cout<<"***CGAL Yarvis Algorithm***"<<std::endl;
 CGAL::convex_hull_2( points.begin(), points.end(), std::back_inserter(results3) );
 
 //for(int i=0; i<results.size(); i++)std::cout<<results[i]<<  ", "<< results2[i]<<std::endl;//output
-Print_Vector(results);
+Print_Vector(results3);
 
 
 return 0;
