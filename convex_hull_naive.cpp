@@ -28,7 +28,7 @@ typedef std::vector<Segment_2> Segments;
 template< class... Args >
 void Print_Vector (Args... args)
 {
-for(int i=0; i<args.size(); i++)std::cout<<..<<", "<<p[i]<<std::endl;//output
+for(int i=0; i<args.size(); i++)std::cout<<...<<", "<<p[i]<<std::endl;//output
 }
 
 
