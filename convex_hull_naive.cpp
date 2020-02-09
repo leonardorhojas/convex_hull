@@ -146,7 +146,8 @@ Generación puntos aleatorios segun profesor Leonardo
 			if (valid==true){
 			//resulting_segments.push_back( Segment_2(points[p] ,points[q]) )	;
       results.push_back(points[p]);
-      results2.push_back(points[q]);
+      results.push_back(points[q]);
+     // results2.push_back(points[q]);
 				}
 			}
 		}
