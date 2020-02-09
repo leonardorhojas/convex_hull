@@ -56,7 +56,7 @@ void getSortPermutation(
  
     std::sort(out.begin(), out.end(),
         [&](unsigned i, unsigned j){ return compare(v[i], v[j]); });
-}2
+}
  
 template <typename T>
 void applyPermutation(
