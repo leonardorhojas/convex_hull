@@ -24,6 +24,14 @@ typedef std::vector<Point_2> Points;
 typedef std::vector<Segment_2> Segments;
 
 
+//--------------------------------------------------------------------------
+template< class _TPrint >
+bool Print_Vector (const _TPrint& p)
+{
+for(int i=0; i<p.size(); i++)std::cout<<p[i]<<  ", "<< p[i]<<std::endl;//output
+}
+
+
 // -------------------------------------------------------------------------
 template< class _TPoint >
 bool IsPointAtRight( const _TPoint& p, const _TPoint& q, const _TPoint& r )
@@ -37,7 +45,6 @@ bool IsPointAtRight( const _TPoint& p, const _TPoint& q, const _TPoint& r )
 }
 
 
- 
 template <typename T, typename Compare>
 void getSortPermutation(
     std::vector<unsigned>& out,
@@ -49,7 +56,7 @@ void getSortPermutation(
  
     std::sort(out.begin(), out.end(),
         [&](unsigned i, unsigned j){ return compare(v[i], v[j]); });
-}
+}2
  
 template <typename T>
 void applyPermutation(
@@ -101,7 +108,7 @@ int main(int argc, char* argv[])
 {
 	
 	/* Generar puntos aleatorios y los asigna a un Vector de puntos points */
-	 Points points, results,results2;
+	 Points points, results,results2,results3;
 	 Segments resulting_segments;
 /*	 
 Generación puntos aleatorios segun profesor Leonardo
@@ -145,21 +152,24 @@ Generación puntos aleatorios segun profesor Leonardo
 		}
 	}
 
-  for(int i=0; i<results.size(); i++)std::cout<<"("<<results[i]<<  "),("<< results2[i]<<")"<<std::endl;//output
+//for(int i=0; i<results.size(); i++)std::cout<<"("<<results[i]<<  "),("<< results2[i]<<")"<<std::endl;//output
+std::cout<<"***Naive Algorithm***"<<std::endl;
+Print_Vector(results);
 
-  std::cout<<"******"<<std::endl;
+//sort(results.begin(),results.end());
+std::cout<<"******"<<std::endl;
+ 
+//Organiza vectores según la coordenada X  https://tuket.github.io/2017-09-30-sorting-multiple-vectors-in-the-same-way-using-c-variadic-templates/
+sortVectors(results, std::less<Point_2>(), results, results2);
 
+std::cout<<"***CGAL Yarvis Algorithm***"<<std::endl;
+CGAL::convex_hull_2( points.begin(), points.end(), std::back_inserter(results3) );
 
- //sort(results.begin(),results.end());
-  std::cout<<"******"<<std::endl;
-  
-  //Organiza vectores según la coordenada X  https://tuket.github.io/2017-09-30-sorting-multiple-vectors-in-the-same-way-using-c-variadic-templates/
-  sortVectors(results, std::less<Point_2>(), results, results2);
-
-
-for(int i=0; i<results.size(); i++)std::cout<<results[i]<<  ", "<< results2[i]<<std::endl;//output
+//for(int i=0; i<results.size(); i++)std::cout<<results[i]<<  ", "<< results2[i]<<std::endl;//output
+Print_Vector(results);
 
 
 return 0;
 }
 
+2
