@@ -28,7 +28,7 @@ typedef std::vector<Segment_2> Segments;
 template< class _TPrint >
 void Print_Vector (const _TPrint& p)
 {
-for(int i=0; i<p.size(); i++)std::cout<<p[i]<<  ", "<< p[i]<<std::endl;//output
+for(int i=0; i<p.size(); i++)std::cout<<p[i]<<std::endl;//output
 }
 
 
@@ -161,7 +161,7 @@ Print_Vector(results);
 std::cout<<"******"<<std::endl;
  
 //Organiza vectores según la coordenada X  https://tuket.github.io/2017-09-30-sorting-multiple-vectors-in-the-same-way-using-c-variadic-templates/
-sortVectors(results, std::less<Point_2>(), results);
+//sortVectors(results, std::less<Point_2>(), results, results2);
 
 std::cout<<"***CGAL Yarvis Algorithm***"<<std::endl;
 CGAL::convex_hull_2( points.begin(), points.end(), std::back_inserter(results3) );
