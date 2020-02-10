@@ -161,7 +161,7 @@ Print_Vector(results);
 std::cout<<"******"<<std::endl;
  
 //Organiza vectores según la coordenada X  https://tuket.github.io/2017-09-30-sorting-multiple-vectors-in-the-same-way-using-c-variadic-templates/
-sortVectors(results, std::less<Point_2>(), results, results2);
+sortVectors(results, std::less<Point_2>(), results);
 
 std::cout<<"***CGAL Yarvis Algorithm***"<<std::endl;
 CGAL::convex_hull_2( points.begin(), points.end(), std::back_inserter(results3) );
