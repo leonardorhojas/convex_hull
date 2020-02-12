@@ -1,4 +1,4 @@
-#include <iostream>
+x #include <iostream>
 #include<stdlib.h> 
 #include<stdio.h> 
 #include <CGAL/Exact_predicates_inexact_constructions_kernel.h>
@@ -68,7 +68,7 @@ int main(int argc, char* argv[])
 
  //CGAL::hilbert_sort (results.begin(), v.end());  
  
- for(int i=0; i<points.size2(); i++)std::cout<<points[i]<<std::endl;//output
+ for(int i=0; i<points.size(); i++)std::cout<<points[i]<<std::endl;//output
 
 
 //Validación incremental izquierda
@@ -91,7 +91,7 @@ r=points[2];
                 results.push_back(r);
             }
       }
-       std::cout<<"|FOR2|" <<i<<"->i|" <<points.size()<<"->points.size()| " <<p<<"->p|"<<q<<"->q|"<<r<<"->r|"<<std::endl;
+  2     std::cout<<"|FOR2|" <<i<<"->i|" <<points.size()<<"->points.size()| " <<p<<"->p|"<<q<<"->q|"<<r<<"->r|"<<std::endl;
        if (i==points.size()){
          results.push_back(r);
          if(right_turn(p, q, r)!=true){  results.push_back(q);}
