@@ -42,7 +42,7 @@ int main(int argc, char* argv[])
 
 
 //generacion aleatoria de puntos version Profeso Leonardo
-  unsigned long n = 10;2
+  unsigned long n = 10;
   if( argc > 1 )
     n = std::atoi( argv[ 1 ] );
   std::random_device rd;
