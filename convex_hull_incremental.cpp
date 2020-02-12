@@ -42,7 +42,7 @@ int main(int argc, char* argv[])
 
 
 //generacion aleatoria de puntos version Profeso Leonardo
-  unsigned long n = 10;
+  unsigned long n = 10;2
   if( argc > 1 )
     n = std::atoi( argv[ 1 ] );
   std::random_device rd;
@@ -68,7 +68,7 @@ int main(int argc, char* argv[])
 
  //CGAL::hilbert_sort (results.begin(), v.end());  
  
- for(int i=0; i<points.size(); i++)std::cout<<points[i]<<std::endl;//output
+ for(int i=0; i<points.size2(); i++)std::cout<<points[i]<<std::endl;//output
 
 
 //Validación incremental izquierda

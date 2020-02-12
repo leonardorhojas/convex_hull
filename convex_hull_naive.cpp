@@ -155,6 +155,8 @@ Generación puntos aleatorios segun profesor Leonardo
 
 //for(int i=0; i<results.size(); i++)std::cout<<"("<<results[i]<<  "),("<< results2[i]<<")"<<std::endl;//output
 std::cout<<"***Naive Algorithm***"<<std::endl;
+results.erase(unique(results.begin,results.end),results.end);
+
 Print_Vector(results);
 
 //sort(results.begin(),results.end());
