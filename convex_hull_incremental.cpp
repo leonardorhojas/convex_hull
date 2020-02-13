@@ -87,7 +87,6 @@ r=points[2];
        results.push_back(p);
        while(right_turn(p, q, r)==true && i<points.size())
        {
-        q=r;
         r=points[i];
 		    i++;
         
@@ -96,7 +95,9 @@ r=points[2];
          results.push_back(r);
          if(right_turn(p, q, r)==true){  results.push_back(q);}
        } else{
+       q=r;
        p=q;
+       r=points[i];
        }
        
 
