@@ -185,6 +185,7 @@ results.assign(result_set.begin(),result_set.end());
 
 Print_Vector(results);
 area1=GreenArea(results);
+std::cout<<"======="<<std::endl;
 std::cout<<"GREEN Area Naive algorithm:"<<area1<<std::endl;
 //sort(results.begin(),results.end());
 std::cout<<"******"<<std::endl;
@@ -198,6 +199,7 @@ CGAL::convex_hull_2( points.begin(), points.end(), std::back_inserter(results3) 
 //for(int i=0; i<results.size(); i++)std::cout<<results[i]<<  ", "<< results2[i]<<std::endl;//output
 Print_Vector(results3);
 area2=GreenArea(results3);
+std::cout<<"======="<<std::endl;
 std::cout<<"GREEN Area Yarvis algorithm:"<<area2<<std::endl;
 
 return 0;
