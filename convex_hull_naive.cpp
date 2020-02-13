@@ -161,7 +161,7 @@ std::cout<<"***Naive Algorithm***"<<std::endl;
 std::set <Point_2> result_set(results.begin(), results.end());
 results.assign(result_set.begin(),result_set.end());
 
- CGAL::hilbert_sort (results.begin,result_set.end());
+ CGAL::hilbert_sort (results.begin,resulst.end());
 
 
 Print_Vector(results);
