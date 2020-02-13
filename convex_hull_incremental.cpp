@@ -92,14 +92,14 @@ r=points[2];
 		    i++;
         
       }
-       if (i==points.size()){
+       if (i==points.size() && right_turn(p, q, r)==true){
          //results.push_back(q);
-         if(right_turn(p, q, r)==true){  results.push_back(q);}
+         results.push_back(q);
        } else{
        p=r;
        q=points[i];
-       //i++;
-       r=points[i+1];
+       i++;
+       r=points[i];
        }
        
 
