@@ -43,7 +43,7 @@ bool IsPointAtRight( const _TPoint& p, const _TPoint& q, const _TPoint& r )
 		p=( Point_2( -0.0969818 ,9.58261) );
 		q=( Point_2( 1.02366,4.9969 ) );
 		r=( Point_2( 4.17675,-6.06603 ) );
-	r_right_of_pq=CGAL::rigth_turn (p, q, r);
+	r_right_of_pq=CGAL::right_turn (p, q, r);
 // r_right_of_pq=IsPointAtRight( p, q, r );
 	if (r_right_of_pq==true){
 		  std::cout<<"r is at right of pq"<<std::endl;
