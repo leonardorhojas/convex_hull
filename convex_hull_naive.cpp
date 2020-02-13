@@ -157,12 +157,12 @@ Generación puntos aleatorios segun profesor Leonardo
 //for(int i=0; i<results.size(); i++)std::cout<<"("<<results[i]<<  "),("<< results2[i]<<")"<<std::endl;//output
 std::cout<<"***Naive Algorithm***"<<std::endl;
 
+//crea un set para dejar sin repeticiones los puntos del convex hull
 std::set <Point_2> result_set(results.begin(), results.end());
 results.assign(result_set.begin(),result_set.end());
 
+ CGAL::hilbert_sort (results.begin,result_set.end());
 
-//sort(results.begin(),results.end());
-//results.erase(unique(results.begin(),results.end()),results.end());
 
 Print_Vector(results);
 
