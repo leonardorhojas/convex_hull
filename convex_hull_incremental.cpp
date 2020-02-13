@@ -75,7 +75,7 @@ int main(int argc, char* argv[])
 
  //CGAL::hilbert_sort (results.begin(), v.end());  
  
- for(int i=0; i<points.size(); i++)std::cout<<"["<<points[i]<<"]"<<std::endl;//output
+ for(int i=0; i<points.size(); i++)std::cout<<"("<<points[i]<<")"<<std::endl;//output
 
 
 //Validación incremental izquierda
