@@ -33,6 +33,22 @@ for(int i=0; i<p.size(); i++)std::cout<<p[i]<<std::endl;//output
 }
 
 
+template< class _TPrint >
+double GreenArea (const _TPrint& p)
+{
+    double area;
+for(int i=0; i<p.size(); i++)
+{
+    if(i<p.size()-1){
+area=(p[i].x()*p[i+1].y() - p[i].y()*p[i+1].x())+ area;
+    }else{
+        area=(p[i].x()+p[0].y() - p[i].y()*p[0].x() )+area;
+    }
+}
+return area;
+}
+
+
 // -------------------------------------------------------------------------
 template< class _TPoint >
 bool IsPointAtRight( const _TPoint& p, const _TPoint& q, const _TPoint& r )
@@ -111,6 +127,7 @@ int main(int argc, char* argv[])
 	/* Generar puntos aleatorios y los asigna a un Vector de puntos points */
 	 Points points, results,results2,results3;
 	 Segments resulting_segments;
+     double area1,area2;
 /*	 
 Generación puntos aleatorios segun profesor Leonardo
 */
@@ -167,6 +184,7 @@ results.assign(result_set.begin(),result_set.end());
 
 
 Print_Vector(results);
+area1=GreenArea(results);
 
 //sort(results.begin(),results.end());
 std::cout<<"******"<<std::endl;
@@ -179,6 +197,7 @@ CGAL::convex_hull_2( points.begin(), points.end(), std::back_inserter(results3) 
 
 //for(int i=0; i<results.size(); i++)std::cout<<results[i]<<  ", "<< results2[i]<<std::endl;//output
 Print_Vector(results3);
+area1=GreenArea(results);
 
 
 return 0;
