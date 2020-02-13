@@ -82,9 +82,9 @@ int main(int argc, char* argv[])
 p=points[0];
 q=points[1];
 r=points[2];
-
+ results.push_back(p);
    for (int i=3;i<=points.size();i++){
-       results.push_back(p);
+      
        while(right_turn(p, q, r)!=true && i<points.size())
        {
         q=r; 
@@ -100,6 +100,7 @@ r=points[2];
        q=points[i];
        i++;
        r=points[i];
+       results.push_back(p);
        }
        
 
