@@ -159,10 +159,11 @@ std::cout<<"***Naive Algorithm***"<<std::endl;
 
 //crea un set para dejar sin repeticiones los puntos del convex hull
 std::set <Point_2> result_set(results.begin(), results.end());
-sort(result_set.begin(),result_set.end());
+results.assign(result_set.begin(),result_set.end());
 
  //CGAL::hilbert_sort (results.begin(),results.end());
-  CGAL::spatial_sort(results.begin(),results.end());
+  //CGAL::spatial_sort(results.begin(),results.end());
+  sort(results.begin(),results.end());
 
 
 Print_Vector(results);
