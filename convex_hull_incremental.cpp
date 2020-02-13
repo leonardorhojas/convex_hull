@@ -98,8 +98,8 @@ r=points[2];
        } else{
        p=r;
        q=points[i];
-       i++;
-       r=points[i];
+       //i++;
+       r=points[i+1];
        }
        
 
