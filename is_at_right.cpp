@@ -38,6 +38,7 @@ bool IsPointAtRight( const _TPoint& p, const _TPoint& q, const _TPoint& r )
 }
   int main( )
 {
+	Point_2 p,q,r;
 	 bool r_right_of_pq;
 		p=( Point_2( -7.92352 ,-3.49278) );
 		q=( Point_2( -1.7415, 4.23544 ) );
