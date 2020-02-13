@@ -23,6 +23,14 @@ typedef K::Segment_2 Segment_2;
 typedef std::vector<Point_2> Points;
 typedef std::vector<Segment_2> Segments;
 
+// -------------------------------------------------------------------------
+
+template< class _TPrint >
+void Print_Vector (const _TPrint& p)
+{
+for(int i=0; i<p.size(); i++)std::cout<<p[i]<<std::endl;//output
+}
+
 
 // -------------------------------------------------------------------------
 
@@ -30,7 +38,7 @@ int main(int argc, char* argv[])
 {
 	
 	/* Generar puntos aleatorios y los asigna a un Vector de puntos points */
-	 Points points, results,results2;
+	 Points points, results,results2,results3;
      Point_2 p,q,r;
 	 Segments resulting_segments;
 /*	 
@@ -107,6 +115,9 @@ r=points[2];
 
  for(int i=0; i<results.size(); i++)std::cout<<results[i]<<std::endl;//output
 
+std::cout<<"***CGAL Yarvis Algorithm***"<<std::endl;
+CGAL::convex_hull_2( points.begin(), points.end(), std::back_inserter(results3) );
+Print_Vector(results3);
 return 0;
 }
 
