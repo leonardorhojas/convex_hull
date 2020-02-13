@@ -41,7 +41,7 @@ int main(int argc, char* argv[])
 */
 
 
-//generacion aleatoria de puntos version Profeso Leonardo
+//generacion aleatoria de puntos version Profesor Leonardo
   unsigned long n = 10;
   if( argc > 1 )
     n = std::atoi( argv[ 1 ] );
