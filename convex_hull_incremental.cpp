@@ -91,7 +91,7 @@ r=points[2];
                 results.push_back(r);
             }
       }
-       std::cout<<"|FOR2|" <<i<<"->i|" <<points.size()<<"->points.size()| " <<p<<"->p|"<<q<<"->q|"<<r<<"->r|"<<std::endl;
+      // std::cout<<"|FOR2|" <<i<<"->i|" <<points.size()<<"->points.size()| " <<p<<"->p|"<<q<<"->q|"<<r<<"->r|"<<std::endl;
        if (i==points.size()){
          results.push_back(r);
          if(right_turn(p, q, r)!=true){  results.push_back(q);}
