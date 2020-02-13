@@ -85,25 +85,16 @@ r=points[2];
 
    for (int i=3;i<=points.size();i++){
        results.push_back(p);
-	  // std::cout<<"|FOR|" <<i<<"->i|"<<points.size()<<"->points.size()| "<<p<<"->p|"<<q<<"->q|"<<r<<"->r|"<<std::endl;
        while(right_turn(p, q, r)!=true && i<points.size())
        {
         q=r;
-        if(i<points.size() ){
-            r=points[i];
-			i++;
-			//std::cout<<"|WHILE|" <<i<<"->i|" <<points.size()<<"->points.size()| " <<p<<"->p|"<<q<<"->q|"<<r<<"->r|"<<std::endl;
-            }else
-            {
-                results.push_back(r);
-            }
+        r=points[i];
+		    i++;
+        
       }
-      // std::cout<<"|FOR2|" <<i<<"->i|" <<points.size()<<"->points.size()| " <<p<<"->p|"<<q<<"->q|"<<r<<"->r|"<<std::endl;
        if (i==points.size()){
          results.push_back(r);
          if(right_turn(p, q, r)!=true){  results.push_back(q);}
-		// std::cout<<"|FOR3|" <<i<<"->i|" <<points.size()<<"->points.size()| " <<p<<"->p|"<<q<<"->q|"<<r<<"->r|"<<std::endl;
-
        } else{
        p=q;
        }
