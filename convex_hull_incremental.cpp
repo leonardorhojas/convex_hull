@@ -60,8 +60,7 @@ int main(int argc, char* argv[])
 /* imprimir el vector de puntos originados*/
   for(int i=0; i<points.size(); i++)std::cout<<"("<<points[i]<<")"<< std::endl;//output
 
-  std::cout<<"******"<<std::endl;
-  std::cout<<"******"<<std::endl;
+  std::cout<<"***Ordenado en X***"<<std::endl;
   //Ordenar vector de puntos por la coordenada X
   sort(points.begin(),points.end());
 
@@ -104,8 +103,7 @@ r=points[2];
 
    }
 
-  std::cout<<"******"<<std::endl;
-  std::cout<<"******"<<std::endl;
+  std::cout<<"***Incremental lado superior***"<<std::endl;
 
  for(int i=0; i<results.size(); i++)std::cout<<results[i]<<std::endl;//output
 
