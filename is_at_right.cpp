@@ -42,9 +42,9 @@ bool IsPointAtRight( const _TPoint& p, const _TPoint& q, const _TPoint& r )
 	 bool r_right_of_pq;
  	 bool r_right_of_pq_2;
 
-		p=( Point_2( -7.92352 ,-3.49278) );
-		q=( Point_2( -1.7415, 4.23544 ) );
-		r=( Point_2( -0.0153198, 8.51879 ) );
+		p=( Point_2( -1.27424,7.29938) );
+		q=( Point_2( 0.403533,-5.83371 ) );
+		r=( Point_2( 3.35, -2.73616) );
 	r_right_of_pq=CGAL::right_turn (p, q, r);
     r_right_of_pq_2=IsPointAtRight( p, q, r );
 	if (r_right_of_pq==true){

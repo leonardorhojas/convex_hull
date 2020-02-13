@@ -92,7 +92,7 @@ r=points[2];
         
       }
        if (i==points.size()){
-         results.push_back(r);
+         //results.push_back(r);
          if(right_turn(p, q, r)!=true){  results.push_back(q);}
        } else{
        q=r;
